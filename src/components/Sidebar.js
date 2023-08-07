@@ -5,7 +5,6 @@ import { useProductsContext } from "../context/products_context";
 import { FaTimes } from "react-icons/fa";
 import { links } from "../utils/constants";
 import styled from "styled-components";
-import CartButtons from "./CartButtons";
 import { useUserContext } from "../context/user_context";
 
 const Sidebar = () => {
@@ -35,13 +34,9 @@ const Sidebar = () => {
           })}
           {myUser && (
             <li>
-              <Link to='/checkout' onClick={closeSidebar}>
-                checkout
-              </Link>
             </li>
           )}
         </ul>
-        <CartButtons />
       </aside>
     </SidebarContainer>
   );

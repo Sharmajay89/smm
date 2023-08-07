@@ -4,8 +4,6 @@ import { Navbar, Sidebar, Footer } from './components'
 import {
   Home,
   SingleProduct,
-  Cart,
-  Checkout,
   Error,
   About,
   Products,
@@ -21,17 +19,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='about' element={<About />} />
-          <Route path='cart' element={<Cart />} />
           <Route path='products' element={<Products />} />
           <Route path='products/:id' element={<SingleProduct />} />
-          <Route
-            path='checkout'
-            element={
-              <PrivateRoute>
-                <Checkout />
-              </PrivateRoute>
-            }
-          />
+          
           <Route path='error' element={<Error />} />
         </Routes>
         <Footer />
