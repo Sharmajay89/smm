@@ -1,33 +1,25 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Navbar, Sidebar, Footer } from './components'
-import {
-  Home,
-  SingleProduct,
-  Error,
-  About,
-  Products,
-  PrivateRoute,
-  AuthWrapper,
-} from './pages'
+import logo from './logo.svg';
+import './App.css';
+
 function App() {
   return (
-    <AuthWrapper>
-      <Router>
-        <Navbar />
-        <Sidebar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='products' element={<Products />} />
-          <Route path='products/:id' element={<SingleProduct />} />
-          
-          <Route path='error' element={<Error />} />
-        </Routes>
-        <Footer />
-      </Router>
-    </AuthWrapper>
-  )
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
-export default App
+export default App;
